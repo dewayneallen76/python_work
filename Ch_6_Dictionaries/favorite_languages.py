@@ -10,3 +10,6 @@ favorite_language = {
 
 language = favorite_language["sarah"].title()
 print(f"Sarah's favorite programming language is {language}")
+# Looping through a dictionary using items() method:
+for name, language in favorite_language.items():
+    print(f"{name.title()}'s favorite programming language is {language.title()}")
