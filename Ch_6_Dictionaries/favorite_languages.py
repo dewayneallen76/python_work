@@ -33,4 +33,18 @@ if "erin" not in favorite_language.keys():
 for name in favorite_language:
     print(name.title())
 
+# You can use the sorted() function to get a copy of the keys in order 
+for name in sorted(favorite_language.keys()):
+    print(f"{name.title()}, thank you for taking our poll.")
+# This for statement is like other for statements, except that we've wrapped the sorted() function
+# around the dictionary.keys()
 
+# If you are primarily interested in the values that a dictionary contains, you can use the values()
+# method to return a sequence of values without any keys. 
+print("The following languages have been mentioned:")
+for language in favorite_language.values():
+    print(language.title())
+
+# To see each language chosen without repetition, we can use set()
+for language in set(favorite_language.values()):
+    print(language.title())
