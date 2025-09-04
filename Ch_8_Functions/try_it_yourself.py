@@ -38,3 +38,22 @@ def describe_city(city, country='japan'):
 describe_city('tokyo')
 describe_city('san antonio', country='united states')
 describe_city('kyoto')
+
+# 8-6 pg. 141
+# Write a function called city_country() that takes in the name of a city and its country. The 
+# function should return a string formatted like this: "Santiago, Chile". Call your function with
+# at least three city-country pairs, and print the values that are returned. 
+def city_country(city, country):
+    """Returns formatted city and country"""
+    formatted_city_country = f"{city.title()}, {country.title()}"
+    return formatted_city_country
+
+city_1 = city_country('paris', 'france')
+print(city_1)
+
+city_2 = city_country('quebec', 'canada')
+print(city_2)
+
+city_3 = city_country('san antonio', 'united states')
+print(city_3)
+
