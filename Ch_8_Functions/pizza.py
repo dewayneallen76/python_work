@@ -4,14 +4,14 @@
 # Fortunately, Python allows a function to collect an arbitrary number of argumnents from 
 # calling the statement 
 
-def make_pizza(*toppings):
-    """Summarize the pizza we are about to make"""
-    print("\nMaking a pizza with the following toppings:")
-    for topping in toppings:
-        print(f"- {topping}")
+# def make_pizza(*toppings):
+#     """Summarize the pizza we are about to make"""
+#     print("\nMaking a pizza with the following toppings:")
+#     for topping in toppings:
+#         print(f"- {topping}")
 
-make_pizza('pepporoni')
-make_pizza('mushrooms', 'green peppers', 'extra cheese', 'banana peppers')
+# make_pizza('pepporoni')
+# make_pizza('mushrooms', 'green peppers', 'extra cheese', 'banana peppers')
 
 # The asterisk in the parameter name *toppings tells Python to make a tuple called toppings, 
 # containing all the values this function receives. 
@@ -25,11 +25,11 @@ make_pizza('mushrooms', 'green peppers', 'extra cheese', 'banana peppers')
 # For example, if the function needs to take a size for the pizza, that parameter must come before
 # the parameter *toppings
 
-def size_pizza(size, *toppings):
+def make_pizza(size, *toppings):
     """Summarize the size and toppings for a pizza"""
     print(f"\nMaking a {size}-inch pizza with the following toppings:")
     for topping in toppings:
         print(f"- {topping}")
 
-size_pizza(12, 'pepperoni')
-size_pizza(16, 'pepperoni', 'ham', 'bacon', 'banana peppers')
+# size_pizza(12, 'pepperoni')
+# size_pizza(16, 'pepperoni', 'ham', 'bacon', 'banana peppers')
