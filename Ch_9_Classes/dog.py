@@ -12,6 +12,9 @@ class Dog:
 # "double underscore"). The __init__() method allows us to define attributes that we want each 
 # instance to have. The self parameter is a reference to the current instance of the class, and it is 
 # used to access variables that belong to the class.
+# The self parameter must be the first parameter of any function in the class, including __init__().
+# Every method call associated with a class automatically passes self, which is a reference to the 
+# instance itself. This allows us to access the attributes and methods of the class in Python
     def __init__(self, name, age):
         """Initialize name and age attributes."""
         self.name = name
@@ -24,7 +27,10 @@ class Dog:
     def roll_over(self):
         """Simulate rolling over in response to a command."""
         print(f"{self.name} rolled over!")
-
+# To access an attribute of an instance, you use dot notation. For example, to access the name
+# attribute of the my_dog instance, you would write my_dog.name. Similarly, to call a method of an 
+# instance, you also use dot notation. For example, to call the sit() method of the my_dog 
+# instance, you would write my_dog.sit().
 my_dog = Dog('Willie', 6)
 print(f"My dog's name is {my_dog.name}.")
 print(f"My dog is {my_dog.age} years old.")
