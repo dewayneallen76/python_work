@@ -41,3 +41,39 @@ class Car:
             self.odometer_reading += miles
         else:
             print("You can't increment the odometer with negative miles!")
+# Storing Multile Classes in a Module
+# You can store multiple classes in a single module. For example, you might store both the Car class
+# and an ElectricCar class in a module called car.py. This allows you to keep related classes together
+# and makes it easier to manage your code.
+class Battery:
+    """A simple model of a battery for an electric car."""
+
+    def __init__(self, battery_size=75):
+        """Initialize the battery's attributes."""
+        self.battery_size = battery_size  # Battery size in kWh
+
+    def describe_battery(self):
+        """Print a statement describing the battery size."""
+        print(f"This car has a {self.battery_size}-kWh battery.")
+    
+    def get_range(self):
+        """Print a statement about the range this battery provides."""
+        if self.battery_size == 75:
+            range = 260
+        elif self.battery_size == 100:
+            range = 315
+        else:
+            range = 200  # Default range for other battery sizes
+
+        print(f"This car can go about {range} miles on a full charge.")
+
+class ElectricCar(Car):
+    """Represent aspects of a car, specific to electric vehicles."""
+
+    def __init__(self, make, model, year):
+        """
+        Initialize attributes of the parent class.
+        Then initialize attributes specific to an electric car.
+        """
+        super().__init__(make, model, year)
+        self.battery = Battery()  # Create a Battery instance as an attribute of ElectricCar
